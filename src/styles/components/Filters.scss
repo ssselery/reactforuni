@@ -29,15 +29,16 @@
 .reset-btn {
 	padding: 8px 16px;
 	border-radius: 8px;
-	border: 1px solid var.$color-warning;
-	background: color-mix(in srgb, var.$color-warning 20%, white);
+	border:none;
+	background: #e5e7eb;
+	color: #374151;
 	cursor: pointer;
 	transition: 0.2s ease;
 	font-weight: 500;
 	margin-bottom: 20px;
 	
 	&:hover {
-		background: color-mix(in srgb, var.$color-warning 40%, white);
+		background: #d1d5db;
 	}
 }
 

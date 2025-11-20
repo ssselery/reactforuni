@@ -1,0 +1,32 @@
+[
+	{
+		"id": 100,
+		"title": "React Router",
+		"description": "Маршрутизация в React",
+		"status": "not-started",
+		"notes": "",
+		"links": [
+			{ "label": "Документация", "url": "https://reactrouter.com" }
+		]
+	},
+	{
+		"id": 101,
+		"title": "Redux Toolkit",
+		"description": "Управление состоянием в крупных проектах",
+		"status": "in-progress",
+		"notes": "Сложная тема, нужно повторить middleware.",
+		"links": [
+			{ "label": "Redux Docs", "url": "https://redux.js.org" }
+		]
+	},
+	{
+		"id": 102,
+		"title": "TypeScript",
+		"description": "Добавление статической типизации",
+		"status": "completed",
+		"notes": "Закрепить работу с generics.",
+		"links": [
+			{ "label": "TS Handbook", "url": "https://www.typescriptlang.org/docs" }
+		]
+	}
+]

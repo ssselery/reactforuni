@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"title": "HTML",
+		"description": "Основы HTML-разметки",
+		"status": "completed",
+		"notes": "Изучил теги, структуру и семантику.",
+		"links": [
+			{ "label": "MDN HTML", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML" }
+		]
+	},
+	{
+		"id": 2,
+		"title": "CSS",
+		"description": "Базовые стили, селекторы и свойства",
+		"status": "in-progress",
+		"notes": "Нужно закрепить Flexbox и Grid.",
+		"links": [
+			{ "label": "CSS Tricks", "url": "https://css-tricks.com" }
+		]
+	}
+]

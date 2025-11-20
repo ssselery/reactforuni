@@ -1,4 +1,4 @@
-import './TechnolodgyNotes.scss'
+import "./TechnolodgyNotes.scss";
 
 function TechnologyNotes({ notes, onNotesChange, techId }) {
 	return (

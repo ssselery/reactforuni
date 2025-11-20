@@ -1,0 +1,159 @@
+.modal-background {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(15, 23, 42, 0.55);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	
+	opacity: 1;
+	animation: modal-fade-in 0.18s ease-out;
+}
+
+.modal-window {
+	background: #ffffff;
+	border-radius: 14px;
+	padding: 0;
+	width: min(520px, 92vw);
+	max-height: 80vh;
+	overflow-y: auto;
+	box-shadow:
+		0 18px 45px rgba(15, 23, 42, 0.35),
+		0 0 0 1px rgba(148, 163, 184, 0.25);
+	transform: translateY(0);
+	animation: modal-slide-up 0.22s ease-out;
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 14px 18px 12px;
+	border-bottom: 1px solid #e2e8f0;
+	
+	h2 {
+		margin: 0;
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: #0f172a;
+	}
+}
+
+.close-button {
+	background: transparent;
+	border: none;
+	font-size: 22px;
+	cursor: pointer;
+	color: #64748b;
+	padding: 4px 8px;
+	border-radius: 999px;
+	line-height: 1;
+	
+	&:hover {
+		background: rgba(148, 163, 184, 0.12);
+		color: #0f172a;
+	}
+	
+	&:focus-visible {
+		outline: 2px solid #22c55e;
+		outline-offset: 2px;
+	}
+}
+
+.modal-content {
+	padding: 18px 20px 20px;
+	font-size: 0.95rem;
+	color: #1f2933;
+	
+	p + p {
+		margin-top: 8px;
+	}
+}
+
+@keyframes modal-fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes modal-slide-up {
+	from {
+		transform: translateY(12px);
+		opacity: 0.9;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.modal-status {
+	padding: 10px 14px;
+	border-radius: 10px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	display: inline-block;
+	
+	&--not-started {
+		background: color-mix(in srgb, #94a3b8 20%, white);
+		color: #475569;
+	}
+	&--in-progress {
+		background: color-mix(in srgb, #f59e0b 15%, white);
+		color: #b45309;
+	}
+	&--completed {
+		background: color-mix(in srgb, #4caf50 25%, white);
+		color: #166534;
+	}
+}
+
+.modal-links {
+	padding-left: 18px;
+	margin: 10px 0 20px;
+	
+	li {
+		margin-bottom: 6px;
+		
+		a {
+			color: #2563eb;
+			text-decoration: none;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.modal-info {
+	font-size: 0.95rem;
+	color: #1e293b;
+	
+	h4 {
+		margin-top: 20px;
+		margin-bottom: 8px;
+	}
+}
+
+.modal-footer {
+	margin-top: 20px;
+	text-align: right;
+}
+
+.modal-close-btn {
+	padding: 8px 14px;
+	background: #e5e7eb;
+	border-radius: 6px;
+	border: 1px solid #cbd5e1;
+	cursor: pointer;
+	
+	&:hover {
+		background: #d1d5db;
+	}
+}

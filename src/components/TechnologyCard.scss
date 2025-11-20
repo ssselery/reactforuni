@@ -2,6 +2,7 @@
 @use '../styles/mixins' as mix;
 
 .tech-card {
+	position: relative;
 	background: var.$color-card-bg;
 	border: 1px solid var.$color-border;
 	@include mix.radius(var.$radius-md);
@@ -59,6 +60,29 @@
 			color: var.$color-gray;
 		}
 	}
+	
+	&__details-btn {
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		
+		padding: 6px 10px;
+		font-size: 0.8rem;
+		border-radius: 6px;
+		border: 1px solid var.$color-border;
+		background: var.$color-light;
+		cursor: pointer;
+		transition: .2s ease;
+		z-index: 2;
+		
+		&:hover {
+			background: color-mix(in srgb, var.$color-success 20%, white);
+			border-color: var.$color-success;
+		}
+	}
 }
+
+
+
 
 
