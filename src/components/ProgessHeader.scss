@@ -4,17 +4,12 @@
 .progress-header {
 	background: linear-gradient(
 			135deg,
-			rgba(76, 175, 80, 0.1),
-			rgba(76, 175, 80, 0.05)
+			color-mix(in srgb, var.$color-success 15%, white),
+			color-mix(in srgb, var.$color-success 5%, white)
 	);
 	padding: 32px;
 	border-radius: var.$radius-md;
-	border: 1px solid rgba(
-			nth(var.$color-success-rgb, 1),
-			nth(var.$color-success-rgb, 2),
-			nth(var.$color-success-rgb, 3),
-			0.35
-	);
+	border: 1px solid color-mix(in srgb, var.$color-success 40%, white);
 	@include mix.shadow(md);
 	margin-bottom: 32px;
 	transition: 0.25s ease;
@@ -40,12 +35,7 @@
 		span {
 			font-size: 1rem;
 			font-weight: 500;
-			color: rgba(
-					nth(var.$color-dark-rgb, 1),
-					nth(var.$color-dark-rgb, 2),
-					nth(var.$color-dark-rgb, 3),
-					0.8
-			);
+			color: color-mix(in srgb, var.$color-dark 80%, white);
 		}
 		
 		.percent {
@@ -59,12 +49,7 @@
 	&__bar {
 		width: 100%;
 		height: 14px;
-		background: rgba(
-				nth(var.$color-success-rgb, 1),
-				nth(var.$color-success-rgb, 2),
-				nth(var.$color-success-rgb, 3),
-				0.15
-		);
+		background: color-mix(in srgb, var.$color-success 15%, white);
 		border-radius: 14px;
 		overflow: hidden;
 		
@@ -73,7 +58,7 @@
 			background: linear-gradient(
 					90deg,
 					var.$color-success,
-					#81c784
+					color-mix(in srgb, var.$color-success 70%, white)
 			);
 			width: 0;
 			transition: 0.5s ease;
