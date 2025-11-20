@@ -1,0 +1,28 @@
+@use "../styles/variables" as var;
+
+.notes-section {
+	margin-top: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	
+	h4 {
+		margin-block: 5px;
+	}
+	
+	textarea {
+		width: 100%;
+		resize: vertical;
+		padding: 10px;
+		border-radius: 8px;
+		border: 1px solid var.$color-border;
+		background: var.$color-card-bg;
+		font-size: 0.9rem;
+		min-height: 70px;
+	}
+	
+	.notes-hint {
+		font-size: 0.8rem;
+		color: color-mix(in srgb, var.$color-gray 80%, white);
+	}
+}

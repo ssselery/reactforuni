@@ -1,0 +1,18 @@
+@use '../variables' as var;
+
+.search-input {
+	width: 100%;
+	padding: 10px 14px;
+	border-radius: 8px;
+	border: 1px solid var.$color-border;
+	background: var.$color-card-bg;
+	font-size: 1rem;
+	margin: 16px 0 10px;
+	transition: 0.2s ease;
+	
+	&:focus {
+		outline: none;
+		border-color: var.$color-success;
+		background: color-mix(in srgb, var.$color-success 10%, white);
+	}
+}

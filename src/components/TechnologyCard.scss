@@ -39,6 +39,7 @@
 		border: 1px solid transparent;
 		transition: 0.2s ease;
 		cursor: pointer;
+		user-select: none;
 		
 		&--completed {
 			background-color: color-mix(in srgb, var.$color-success 12%, white);
@@ -59,3 +60,5 @@
 		}
 	}
 }
+
+
