@@ -1,0 +1,19 @@
+@use './variables' as var;
+
+body {
+	background: #f5f5f5;
+	font-family: var.$font-main;
+	color: var.$color-dark;
+	line-height: 1.5;
+}
+
+h1, h2, h3 {
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}

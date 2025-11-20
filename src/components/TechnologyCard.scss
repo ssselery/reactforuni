@@ -1,0 +1,110 @@
+@use '../styles/variables' as var;
+@use '../styles/mixins' as mix;
+
+.tech-card {
+	background: var.$color-card-bg;
+	border: 1px solid rgba(
+			nth(var.$color-border-rgb, 1),
+			nth(var.$color-border-rgb, 2),
+			nth(var.$color-border-rgb, 3),
+			0.5
+	);
+	@include mix.radius(var.$radius-md);
+	padding: 24px 28px;
+	@include mix.shadow(sm);
+	transition: 0.25s ease;
+	cursor: default;
+	
+	// Hover эффект
+	&:hover {
+		transform: translateY(-4px);
+		@include mix.shadow(md);
+		border-color: rgba(
+				nth(var.$color-border-rgb, 1),
+				nth(var.$color-border-rgb, 2),
+				nth(var.$color-border-rgb, 3),
+				0.8
+		);
+	}
+	
+	&__title {
+		margin-bottom: 10px;
+		font-size: 1.35rem;
+		font-weight: 600;
+		color: var.$color-dark;
+	}
+	
+	&__description {
+		margin-bottom: 18px;
+		font-size: 1rem;
+		color: rgba(
+				nth(var.$color-gray-rgb, 1),
+				nth(var.$color-gray-rgb, 2),
+				nth(var.$color-gray-rgb, 3),
+				0.8
+		);
+	}
+	
+	&__status {
+		display: inline-flex;
+		align-items: center;
+		padding: 6px 14px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		border-radius: 30px;
+		border: 1px solid transparent;
+		transition: 0.2s ease;
+		
+		&--completed {
+			background-color: rgba(
+					nth(var.$color-success-rgb, 1),
+					nth(var.$color-success-rgb, 2),
+					nth(var.$color-success-rgb, 3),
+					0.12
+			);
+			border-color: rgba(
+					nth(var.$color-success-rgb, 1),
+					nth(var.$color-success-rgb, 2),
+					nth(var.$color-success-rgb, 3),
+					0.4
+			);
+			color: var.$color-success;
+		}
+		
+		&--in-progress {
+			background-color: rgba(
+					nth(var.$color-warning-rgb, 1),
+					nth(var.$color-warning-rgb, 2),
+					nth(var.$color-warning-rgb, 3),
+					0.12
+			);
+			border-color: rgba(
+					nth(var.$color-warning-rgb, 1),
+					nth(var.$color-warning-rgb, 2),
+					nth(var.$color-warning-rgb, 3),
+					0.4
+			);
+			color: var.$color-warning;
+		}
+		
+		&--not-started {
+			background-color: rgba(
+					nth(var.$color-gray-rgb, 1),
+					nth(var.$color-gray-rgb, 2),
+					nth(var.$color-gray-rgb, 3),
+					0.12
+			);
+			border-color: rgba(
+					nth(var.$color-gray-rgb, 1),
+					nth(var.$color-gray-rgb, 2),
+					nth(var.$color-gray-rgb, 3),
+					0.4
+			);
+			color: rgb(
+					nth(var.$color-gray-rgb, 1),
+					nth(var.$color-gray-rgb, 2),
+					nth(var.$color-gray-rgb, 3)
+			);
+		}
+	}
+}

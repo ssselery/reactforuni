@@ -1,0 +1,24 @@
+@use './variables' as var;
+
+@mixin flex($align: center, $justify: center, $gap: 0) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	gap: $gap;
+}
+
+@mixin radius($size) {
+	border-radius: $size;
+}
+
+@mixin shadow($type: sm) {
+	@if $type == sm {
+		box-shadow: var.$shadow-sm;
+	} @else if $type == md {
+		box-shadow: var.$shadow-md;
+	}
+}
+
+@mixin text-responsive($min, $max) {
+	font-size: clamp($min, $max, $max * 1.2);
+}
