@@ -1,0 +1,43 @@
+@use '../../styles/variables' as var;
+
+.filters {
+	display: flex;
+	gap: 10px;
+	margin: 20px 0;
+	
+	button {
+		padding: 8px 14px;
+		border-radius: 8px;
+		border: 1px solid var.$color-border;
+		background: var.$color-card-bg;
+		cursor: pointer;
+		transition: 0.2s ease;
+		font-weight: 500;
+		
+		&:hover {
+			background: color-mix(in srgb, var.$color-border 20%, white);
+		}
+		
+		&.active {
+			background: color-mix(in srgb, var.$color-success 20%, white);
+			border-color: var.$color-success;
+			color: var.$color-success;
+		}
+	}
+}
+
+.reset-btn {
+	padding: 8px 16px;
+	border-radius: 8px;
+	border: 1px solid var.$color-warning;
+	background: color-mix(in srgb, var.$color-warning 20%, white);
+	cursor: pointer;
+	transition: 0.2s ease;
+	font-weight: 500;
+	margin-bottom: 20px;
+	
+	&:hover {
+		background: color-mix(in srgb, var.$color-warning 40%, white);
+	}
+}
+

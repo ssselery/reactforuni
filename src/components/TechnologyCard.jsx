@@ -1,27 +1,22 @@
-import './TechnologyCard.scss'
+import "./TechnologyCard.scss";
 
-function TechnologyCard( {title, description, status }) {
-	let statusText
-	let statusClass
-	
-	if (status === 'completed') {
-		statusText = 'Изучено'
-		statusClass = 'tech-card__status tech-card__status--completed'
-	} else if (status === 'in-progress') {
-		statusText = 'В процессе'
-		statusClass = 'tech-card__status tech-card__status--in-progress'
-	} else {
-		statusText = 'Не начато'
-		statusClass = 'tech-card__status tech-card__status--not-started'
-	}
+function TechnologyCard({ title, description, status, onStatusChange }) {
+	const statusText = {
+		"not-started": "Не начато",
+		"in-progress": "В процессе",
+		completed: "Изучено",
+	};
 	
 	return (
-		<article className={`tech-card tech-card--${status}`}>
+		<div className="tech-card" onClick={onStatusChange}>
 			<h3 className="tech-card__title">{title}</h3>
 			<p className="tech-card__description">{description}</p>
-			<span className={statusClass}>{statusText}</span>
-		</article>
-	)
+			
+			<span className={`tech-card__status tech-card__status--${status}`}>
+        {statusText[status]}
+      </span>
+		</div>
+	);
 }
 
-export default TechnologyCard
+export default TechnologyCard;
